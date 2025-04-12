@@ -1,48 +1,48 @@
 {
-  "name": "authentication",
-  "version": "1.0.0",
-  "description": "Production-ready authentication system using Node.js, Express, and MongoDB",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node src/server.js",
-    "lint": "eslint .",
-    "test": "echo \"No tests yet\"",
-    "format": "prettier --write ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iamashishshah/auth-system.git"
-  },
-  "keywords": [
-    "auth",
-    "authentication",
-    "express",
-    "mongodb",
-    "jwt",
-    "nodejs"
-  ],
-  "author": "Ashish Shah",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iamashishshah/auth-system/issues"
-  },
-  "homepage": "https://github.com/iamashishshah/auth-system#readme",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "private": true,
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^5.1.0",
-    "mongoose": "^8.13.2",
-    "nodemailer": "^6.10.0"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "nodemon": "^3.1.9",
-    "supertest": "^7.1.0"
-  }
+    "name": "authentication",
+    "version": "1.0.0",
+    "description": "Production-ready authentication system using Node.js, Express, and MongoDB",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon src/server.js",
+        "start": "node src/server.js",
+        "lint": "eslint .",
+        "test": "echo \"No tests yet\"",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^5.1.0",
+        "mongoose": "^8.13.2",
+        "nodemailer": "^6.10.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "nodemon": "^3.1.9",
+        "supertest": "^7.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iamashishshah/auth-system.git"
+    },
+    "keywords": [
+        "auth",
+        "authentication",
+        "express",
+        "mongodb",
+        "jwt",
+        "nodejs"
+    ],
+    "author": "Ashish Shah",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/iamashishshah/auth-system/issues"
+    },
+    "homepage": "https://github.com/iamashishshah/auth-system#readme",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "private": true
 }

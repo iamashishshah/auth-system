@@ -1,0 +1,1 @@
+export const whiteListURL = ["http://localhost:9999", "localhost:9999", "http://127.0.0.1:9999"]
