@@ -1,9 +1,10 @@
-import { whiteListURL } from "../constants/constant.cors.js";
-import { APIError } from "../utils/util.api-error.js";
+import { whiteListURL } from "../constants/cors.constant.js";
+import { APIError } from "../utils/api-error.util.js";
 
 export const corsOptions = {
     origin: function (origin, callback) {
         console.log("Incoming Origin:", origin);
+        console.log(callback)
 
         if (!origin || whiteListURL.includes(origin)) {
             return callback(null, true);

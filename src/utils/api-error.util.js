@@ -15,7 +15,7 @@ class APIError extends Error {
      */
     constructor(statusCode, message, errors = [], stack = "", isOperational = true) {
         super(message);
-
+        
         // Validate the status code
         if (statusCode < 100 || statusCode >= 600) {
             throw new Error(`Invalid HTTP status code: ${statusCode}`);

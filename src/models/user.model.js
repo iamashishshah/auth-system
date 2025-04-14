@@ -1,15 +1,11 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from "bcrypt";
+
 
 const userSchema = new Schema(
     {
-        fname: {
+        name: {
             type: String,
-            required: [true, "Please provide first name"],
-            trim: true,
-        },
-        lname: {
-            type: String,
+            required: [true, "Please provide name"],
             trim: true,
         },
         email: {
@@ -57,19 +53,21 @@ const userSchema = new Schema(
     },
 );
 
-// ✅ Indexes
-userSchema.index({ email: 1 });
-userSchema.index({ username: 1 });
-
-
-userSchema.pre("save", async function (next) {
-    if (!this.isModified("password")) return next();
-    this.password = await bcrypt.hash(this.password, 12);
-    next();
-});
-
-userSchema.methods.comparePassword = async function (candidatePassword) {
-    return await bcrypt.compare(candidatePassword, this.password);
-};
-
 export const User = mongoose.model("User", userSchema);
+
+// ✅ Indexes
+// userSchema.index({ email: 1 });
+// userSchema.index({ username: 1 });
+
+
+// userSchema.pre("save", async function (next) {
+//     if (!this.isModified("password")) return next();
+//     this.password = await bcrypt.hash(this.password, 12);
+//     next();
+// });
+
+// userSchema.methods.comparePassword = async function (candidatePassword) {
+//     return await bcrypt.compare(candidatePassword, this.password);
+// };
+
+// export const User = mongoose.model("User", userSchema);
