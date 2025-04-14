@@ -3,6 +3,7 @@ import { healthcheck } from "./controllers/healthcheck.controller.js";
 import cors from "cors";
 import { corsOptions } from "./middlewares/cors.middleware.js";
 import { attachAshishData } from "./middlewares/getAshishData.middleware.js";
+import userRoutes from "./routes/auth.route.js";
 
 const app = express();
 
@@ -18,5 +19,6 @@ app.get("/ashish", attachAshishData, (req, res) => {
     res.send(str);
 });
 app.use("/api/v1/healthcheck", healthcheck);
+app.use("/api/v1/users/", userRoutes)
 
 export default app;
